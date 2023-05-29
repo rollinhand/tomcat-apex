@@ -1,0 +1,16 @@
+@startuml "ORDS and Tomcat"
+skinparam componentStyle rectangle
+
+component "Tomcat" #Orange {
+    [ORDS] #Red
+}
+
+component "Oracle Database" as Oracle #Red {
+    [APEX] #Red
+}
+
+component "Client" as Client #Green
+
+Client <-r-> Tomcat
+ORDS <-r-> Oracle
+@enduml
